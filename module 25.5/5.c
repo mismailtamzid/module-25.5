@@ -1,12 +1,14 @@
 #include<stdio.h>
-int  total(int a, int b, int c){
-   return a+b+c;
+int  total(int n){
+    if(n!=0){
+        return n+ total(n-1);
+    }
 
 }
 int main(){
-int a,b,c, ans;
-scanf("%d%d%d", &a, &b, &c);
-ans=total(a,b,c);
+int n, ans;
+scanf("%d", &n);
+ans=total(n);
 printf("%d", ans);
 return 0;
 }
